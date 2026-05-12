@@ -1,0 +1,6 @@
+.heading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--primary-light);
+  letter-spacing: 0.1rem;
+}

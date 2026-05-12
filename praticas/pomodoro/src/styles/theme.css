@@ -1,0 +1,46 @@
+/* ===================================================
+   TEMA PERSONALIZADO — Chronos Pomodoro
+   Paleta: violeta/roxo
+   Tipografia: Orbitron (display) + Nunito (corpo)
+   =================================================== */
+:root {
+  --gray-100: #ede9f8;
+  --gray-200: #d5cef0;
+  --gray-300: #b0a6e0;
+  --gray-400: #6b5ea8;
+  --gray-500: #564d8a;
+  --gray-600: #403870;
+  --gray-700: #2d2555;
+  --gray-800: #1a1438;
+  --gray-900: #0d0920;
+
+  --primary-light: #c4b5fd;
+  --primary: #7c3aed;
+  --primary-dark: #4c1d95;
+
+  --link-color: #8b5cf6;
+  --link-hover: #6d28d9;
+
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --error: #dc2626;
+  --info: #38bdf8;
+
+  --text-over-primary: #ede9f8;
+  --text-over-primary-dark: #ede9f8;
+  --text-over-primary-light: #0d0920;
+  --text-over-success: #0d0920;
+  --text-over-warning: #0d0920;
+  --text-over-error: #ede9f8;
+  --text-over-info: #0d0920;
+
+  --text-default: #ede9f8;
+  --text-muted: #b0a6e0;
+
+  --disabled: #6b5ea8;
+  --text-disabled: #b0a6e0;
+
+  /* Fontes personalizadas */
+  --font-display: 'Orbitron', monospace;
+  --font-body: 'Nunito', sans-serif;
+}

@@ -1,0 +1,189 @@
+/* Variáveis de design da tela de login (escopo local) */
+.page {
+  --login-bg: #0a0a0f;
+  --login-surface: #111118;
+  --login-card: #16161f;
+  --login-border: #2a2a3a;
+  --login-accent: #e8c547;
+  --login-accent-glow: rgba(232, 197, 71, 0.18);
+  --login-text-primary: #f0f0f5;
+  --login-text-secondary: #9090a8;
+  --login-text-muted: #606078;
+  --login-input-bg: #1a1a24;
+  --login-input-focus: #1e1e2a;
+
+  min-height: 100vh;
+  background: var(--login-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  position: relative;
+  overflow: hidden;
+  font-size: 1rem; /* reset para 16px base na página de login */
+}
+
+/* ── Decorações de fundo ────────────────────────────────────────────────────── */
+
+.bgDecor1 {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232, 197, 71, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.bgDecor2 {
+  position: absolute;
+  bottom: -25%;
+  left: -15%;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(100, 100, 200, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.bgGrid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--login-border) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.4;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+}
+
+/* ── Container principal ────────────────────────────────────────────────────── */
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+  animation: containerReveal 0.6s ease forwards;
+}
+
+@keyframes containerReveal {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Cabeçalho / marca ──────────────────────────────────────────────────────── */
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logoMark {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.brandName {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--login-text-primary);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.brandTag {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--login-accent);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* ── Card de login ──────────────────────────────────────────────────────────── */
+
+.card {
+  width: 100%;
+  background: var(--login-card);
+  border: 1px solid var(--login-border);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.3),
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Linha dourada decorativa no topo do card */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--login-accent), transparent);
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.cardTitle {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--login-text-primary);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.cardSubtitle {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--login-text-muted);
+  margin: 0;
+}
+
+/* ── Rodapé ─────────────────────────────────────────────────────────────────── */
+
+.footer {
+  text-align: center;
+}
+
+.footerText {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--login-text-muted);
+  margin: 0;
+  letter-spacing: 0.05em;
+}
+
+/* ── Responsividade ─────────────────────────────────────────────────────────── */
+
+@media (max-width: 480px) {
+  .card {
+    padding: 2rem 1.5rem;
+  }
+}
