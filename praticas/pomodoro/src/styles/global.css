@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Nunito:wght@400;600;700&family=Syne:wght@700;800&family=Space+Mono:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 1.6rem; /* 16px */
+  background: var(--gray-900);
+  color: var(--text-default);
+  background-image: radial-gradient(
+    ellipse at 50% 0%,
+    #1a1050 0%,
+    var(--gray-900) 70%
+  );
+  min-height: 100vh;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.formRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.4rem;
+}

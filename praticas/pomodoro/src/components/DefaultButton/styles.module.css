@@ -1,0 +1,44 @@
+.button {
+  border: none;
+  background: var(--primary);
+  color: var(--text-over-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24rem;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+  margin: 4.8rem 0;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  /* Personalização: gradiente no botão */
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  box-shadow: 0 0.4rem 1.6rem rgba(124, 58, 237, 0.4);
+}
+
+.button svg {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.button:hover {
+  filter: brightness(85%);
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0.8rem 2rem rgba(124, 58, 237, 0.5);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+/* Personalização: verde mantido como variante secundária */
+.green {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: var(--text-over-primary);
+}
+
+.red {
+  background: var(--error);
+  color: var(--text-over-error);
+  box-shadow: 0 0.4rem 1.6rem rgba(220, 38, 38, 0.4);
+}

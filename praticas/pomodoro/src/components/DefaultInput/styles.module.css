@@ -1,0 +1,33 @@
+.input {
+  background-color: transparent;
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 0.8rem;
+  color: var(--text-default);
+  outline: none;
+  font-family: var(--font-body);
+
+  border: 0.2rem solid transparent;
+  /* Personalização: borda inferior violeta */
+  border-bottom: 0.2rem solid var(--primary);
+  transition: all 0.15s ease-in-out;
+}
+
+.input:focus {
+  border-radius: 0.8rem;
+  border: 0.2rem solid var(--primary);
+  /* Personalização: brilho sutil no foco */
+  box-shadow: 0 0 0.8rem rgba(124, 58, 237, 0.25);
+}
+
+.input::placeholder {
+  /* Personalização: cor muted da paleta violeta */
+  color: var(--gray-400);
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+.input:disabled {
+  border-bottom: 0.2rem solid var(--disabled);
+  color: var(--text-muted);
+}

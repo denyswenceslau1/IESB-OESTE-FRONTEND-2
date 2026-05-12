@@ -1,0 +1,34 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+  padding-top: 3.2rem;
+}
+
+.logoLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  gap: 0.4rem;
+  /* Personalização: fonte Orbitron para o logo */
+  font-family: var(--font-display);
+  font-size: 4.2rem;
+  text-decoration: none;
+  color: var(--primary-light);
+  letter-spacing: 0.3rem;
+  /* Personalização: brilho sutil no texto */
+  text-shadow: 0 0 2rem rgba(196, 181, 253, 0.4);
+  transition: all 0.1s ease-in-out;
+}
+
+.logoLink:hover {
+  filter: brightness(80%);
+}
+
+.logoLink svg {
+  width: 6.4rem;
+  height: 6.4rem;
+}

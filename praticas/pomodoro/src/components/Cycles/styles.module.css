@@ -1,0 +1,39 @@
+.cycles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+.cycleDots {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.cycleDot {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--primary);
+  border-radius: 50%;
+  /* Personalização: sombra nos pontos */
+  box-shadow: 0 0 0.6rem rgba(124, 58, 237, 0.5);
+}
+
+/* Personalização: workTime em âmbar (mantido do original) */
+.workTime {
+  background: var(--warning);
+  box-shadow: 0 0 0.6rem rgba(245, 158, 11, 0.5);
+}
+
+/* Personalização: shortBreakTime em violeta (em vez de verde) */
+.shortBreakTime {
+  background: var(--primary);
+  box-shadow: 0 0 0.6rem rgba(124, 58, 237, 0.5);
+}
+
+/* Personalização: longBreakTime em azul claro (mantido do original) */
+.longBreakTime {
+  background: var(--info);
+  box-shadow: 0 0 0.6rem rgba(56, 189, 248, 0.5);
+}
