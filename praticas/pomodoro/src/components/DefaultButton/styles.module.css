@@ -1,0 +1,49 @@
+/*
+  Estilos para o componente DefaultButton, alinhado ao novo design.
+*/
+
+.button {
+  border: none;
+  background: var(--primary-green); /* Cor primária do novo tema */
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1.4rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  font-family: var(--font-body);
+  font-size: 1.6rem;
+  font-weight: 700;
+  gap: 0.8rem;
+}
+
+.button svg {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+/* Efeito de hover e foco */
+.button:hover {
+  background: #388E3C; /* Um tom mais escuro de verde */
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.4);
+}
+
+.button:active {
+  background: #2E7D32;
+}
+
+/* Variações de cor */
+.red {
+  background: var(--error-red);
+}
+
+.red:hover {
+  background: #D32F2F;
+}

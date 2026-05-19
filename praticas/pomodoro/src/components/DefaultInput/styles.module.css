@@ -1,0 +1,37 @@
+/*
+  Estilos para o componente DefaultInput, redesenhado para o tema escuro.
+*/
+
+.input {
+  background-color: var(--surface-dark); /* Fundo da superfície */
+  text-align: left;
+  font-size: 1.6rem;
+  padding: 1.2rem;
+  color: var(--text-primary);
+  outline: none;
+  font-family: var(--font-body);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color); /* Borda sutil */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+/* Estado de foco */
+.input:focus {
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3);
+}
+
+/* Estilo do placeholder */
+.input::placeholder {
+  color: var(--text-secondary); /* Cor de texto secundária */
+  font-style: italic;
+}
+
+/* Estado desabilitado */
+.input:disabled {
+  background-color: #2a2a2a;
+  border-color: #444;
+  color: var(--text-secondary);
+  cursor: not-allowed;
+}

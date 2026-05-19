@@ -1,0 +1,40 @@
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--login-accent);
+}
+
+.input {
+  width: 100%;
+  padding: 0.9rem 1.1rem;
+  background: var(--login-input-bg);
+  border: 1.5px solid var(--login-border);
+  border-radius: 4px;
+  color: var(--login-text-primary);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: var(--login-accent);
+  box-shadow: 0 0 0 3px var(--login-accent-glow);
+  background: var(--login-input-focus);
+}
+
+.input::placeholder {
+  color: var(--login-text-muted);
+  font-style: italic;
+}
