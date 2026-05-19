@@ -1,0 +1,128 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  width: 100%;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Feedback de status ─────────────────────────────────────────────────────── */
+
+.feedback {
+  padding: 0.9rem 1rem;
+  border-radius: 4px;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  border-left: 3px solid;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-8px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.feedback.success {
+  background: rgba(110, 231, 183, 0.12);
+  color: #6ee7b7;
+  border-color: #6ee7b7;
+}
+
+.feedback.error {
+  background: rgba(252, 129, 74, 0.12);
+  color: #fc814a;
+  border-color: #fc814a;
+}
+
+.feedback.info {
+  background: rgba(147, 197, 253, 0.1);
+  color: #93c5fd;
+  border-color: #93c5fd;
+}
+
+/* ── Dica de credenciais ────────────────────────────────────────────────────── */
+
+.hint {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--login-text-muted);
+  margin: -0.5rem 0 0;
+  padding: 0.6rem 0.8rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 3px;
+  border: 1px dashed var(--login-border);
+}
+
+.hintLabel {
+  color: var(--login-accent);
+  font-weight: 700;
+}
+
+/* ── Telas alternativas (cadastro / recuperar senha) ────────────────────────── */
+
+.alternativeView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.alternativeIcon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.alternativeTitle {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--login-text-primary);
+  margin: 0;
+}
+
+.alternativeText {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--login-text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.alternativeSubtext {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--login-text-muted);
+  margin: 0;
+  padding: 0.7rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 4px;
+  border: 1px dashed var(--login-border);
+  line-height: 1.6;
+}
+
+.backButton {
+  background: none;
+  border: 1.5px solid var(--login-border);
+  color: var(--login-text-secondary);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.82rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.backButton:hover {
+  border-color: var(--login-accent);
+  color: var(--login-accent);
+}

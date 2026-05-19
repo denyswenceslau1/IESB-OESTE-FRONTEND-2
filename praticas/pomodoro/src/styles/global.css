@@ -1,0 +1,45 @@
+/*
+  Este arquivo aplica estilos globais que afetam todo o aplicativo.
+  Ele importa o tema e define os padrões para o corpo, fontes e outros elementos.
+*/
+
+/* Importa as variáveis de tema, que incluem cores e fontes. */
+@import './theme.css';
+
+/* Reset básico e configuração de box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Define o estilo base para o corpo do documento */
+body {
+  background: var(--background-dark); /* Fundo escuro do novo tema */
+  color: var(--text-primary);         /* Cor de texto padrão */
+  font-family: var(--font-body);      /* Fonte do corpo do novo tema */
+  -webkit-font-smoothing: antialiased; /* Melhora a renderização da fonte */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*
+  Estilos para formulários e linhas de formulário.
+  Mantidos para estrutura, mas o estilo específico será tratado nos componentes.
+*/
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.4rem;
+  width: 100%;
+}
+
+.formRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.4rem;
+  width: 100%;
+}

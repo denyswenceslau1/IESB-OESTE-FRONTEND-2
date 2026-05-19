@@ -1,0 +1,27 @@
+
+/*
+  Este arquivo define as variáveis CSS globais para o tema do aplicativo,
+  incluindo cores, fontes e outros aspectos de design.
+*/
+
+/* Importação de fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto+Mono:wght@400;700&display=swap');
+
+:root {
+  /* Paleta de Cores Minimalista */
+  --background-dark: #121212;   /* Fundo principal escuro */
+  --surface-dark: #1E1E1E;      /* Superfície para componentes (cards, inputs) */
+  --primary-green: #4CAF50;     /* Cor primária para botões e interações */
+  --secondary-purple: #9C27B0;  /* Cor secundária para destaques */
+  --text-primary: #FFFFFF;      /* Cor principal do texto */
+  --text-secondary: #B0B0B0;    /* Cor de texto para informações secundárias */
+  --error-red: #E53935;         /* Cor para mensagens de erro */
+  --border-color: #333333;      /* Cor para bordas sutis */
+
+  /* Tipografia */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Roboto Mono', monospace;
+
+  /* Outras Variáveis de UI */
+  --border-radius: 8px; /* Cantos mais suaves */
+}
