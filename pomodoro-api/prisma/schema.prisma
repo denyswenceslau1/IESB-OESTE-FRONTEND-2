@@ -1,0 +1,57 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            Int       @id @default(autoincrement())
+  email         String    @unique
+  name          String
+  passwordHash  String
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  settings      Settings?
+  tasks         Task[]
+  resetTokens   PasswordResetToken[]
+}
+
+model PasswordResetToken {
+  id        Int      @id @default(autoincrement())
+  token     String   @unique
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+  used      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model Settings {
+  id             Int      @id @default(autoincrement())
+  userId         Int      @unique
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  workTime       Int      @default(25)
+  shortBreakTime Int      @default(5)
+  longBreakTime  Int      @default(15)
+  updatedAt      DateTime @updatedAt
+}
+
+model Task {
+  id            String   @id
+  userId        Int
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name          String
+  duration      Int
+  type          String
+  startDate     BigInt
+  completeDate  BigInt?
+  interruptDate BigInt?
+  createdAt     DateTime @default(now())
+
+  @@index([startDate])
+  @@index([userId])
+}
